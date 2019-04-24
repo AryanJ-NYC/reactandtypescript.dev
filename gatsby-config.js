@@ -1,4 +1,17 @@
+const proxy = require('http-proxy-middleware');
+
 module.exports = {
+  developMiddleware: app => {
+    app.use(
+      '/.netlify/functions/',
+      proxy({
+        target: 'http://localhost:34567',
+        pathRewrite: {
+          '/.netlify/functions/': '',
+        },
+      })
+    );
+  },
   siteMetadata: {
     title: `React and Typescript`,
     description: `React and TypeScript: The Unofficial Documentation`,
