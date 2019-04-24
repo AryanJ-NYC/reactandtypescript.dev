@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "react-and-typescript",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "React and TypeScript: The Unofficial Documentation",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Aryan Jabbari <aryanjabbari@gmail.com>",
   "dependencies": {
     "gatsby": "^2.3.27",
     "gatsby-image": "^2.0.40",
@@ -22,7 +22,9 @@
     "prettier": "^1.17.0"
   },
   "keywords": [
-    "gatsby"
+    "gatsby",
+    "react",
+    "typescript"
   ],
   "license": "MIT",
   "scripts": {
