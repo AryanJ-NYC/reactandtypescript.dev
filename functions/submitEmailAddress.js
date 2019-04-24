@@ -1,6 +1,6 @@
 const axios = require('axios');
 
-exports.handler = async function(event, _, callback) {
+exports.handler = async function(event) {
   const { body } = event;
   const apiKey = process.env.GATSBY_MAILING_LIST_API_KEY;
   const response = await axios.post(
@@ -13,7 +13,7 @@ exports.handler = async function(event, _, callback) {
     }
   );
 
-  return callback(null, {
+  return {
     headers: {
       'Access-Control-Allow-Headers': '*',
       'Access-Control-Allow-Methods': 'OPTIONS,POST',
@@ -21,5 +21,5 @@ exports.handler = async function(event, _, callback) {
     },
     statusCode: 201,
     body: JSON.stringify(response.data),
-  });
+  };
 };
