@@ -8,6 +8,7 @@
     "axios": "^0.18.0",
     "gatsby": "^2.3.27",
     "gatsby-image": "^2.0.40",
+    "gatsby-plugin-layout": "^1.0.15",
     "gatsby-plugin-manifest": "^2.0.29",
     "gatsby-plugin-offline": "^2.0.25",
     "gatsby-plugin-react-helmet": "^3.0.12",
@@ -22,6 +23,9 @@
     "styled-components": "^4.2.0"
   },
   "devDependencies": {
+    "docz": "^1.0.4",
+    "docz-theme-default": "^1.0.4",
+    "gatsby-theme-docz": "^1.0.4",
     "prettier": "^1.17.0"
   },
   "keywords": [
@@ -40,9 +44,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/AryanJ-NYC/reactandtypescript.dev"
   },
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/AryanJ-NYC/reactandtypescript.dev/issues"
   }
 }

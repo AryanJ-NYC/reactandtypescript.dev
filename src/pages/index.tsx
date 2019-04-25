@@ -1,6 +1,4 @@
 import React, { useState } from 'react';
-
-import Layout from '../components/layout';
 import SEO from '../components/seo';
 
 const IndexPage = () => {
@@ -21,7 +19,7 @@ const IndexPage = () => {
   };
 
   return (
-    <Layout>
+    <>
       <SEO title="Home" />
       <h1>Hi people</h1>
       <p>Coming soon: React and TypeScript documentation!</p>
@@ -79,7 +77,7 @@ const IndexPage = () => {
         </a>
         . Words of encouragement are always welcome!
       </p>
-    </Layout>
+    </>
   );
 };
 

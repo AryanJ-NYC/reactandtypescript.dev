@@ -1,0 +1,69 @@
+{
+  "config": {
+    "title": "React And Typescript",
+    "description": "React and TypeScript: The Unofficial Documentation",
+    "menu": [],
+    "version": "0.1.0",
+    "repository": "https://github.com/AryanJ-NYC/reactandtypescript.dev",
+    "native": false,
+    "codeSandbox": true,
+    "themeConfig": {},
+    "separator": "-"
+  },
+  "entries": [
+    {
+      "key": "src/pages/examples.mdx",
+      "value": {
+        "name": "Examples",
+        "id": "b743a7e2dc9849530f394eb6172e83b8",
+        "filepath": "src/pages/examples.mdx",
+        "link": "https://github.com/AryanJ-NYC/reactandtypescript.dev/edit/master/src/pages/examples.mdx",
+        "slug": "src-pages-examples",
+        "route": "/src-pages-examples",
+        "menu": "",
+        "headings": [
+          {
+            "slug": "react-and-typescript-examples",
+            "depth": 1,
+            "value": "React and TypeScript Examples"
+          }
+        ]
+      }
+    },
+    {
+      "key": "src/pages/functional-components.mdx",
+      "value": {
+        "name": "Functional Components",
+        "id": "8e6e7e02a956cefb4e0ddcc9e1f626c3",
+        "filepath": "src/pages/functional-components.mdx",
+        "link": "https://github.com/AryanJ-NYC/reactandtypescript.dev/edit/master/src/pages/functional-components.mdx",
+        "slug": "src-pages-functional-components",
+        "route": "/src-pages-functional-components",
+        "menu": "",
+        "headings": [
+          {
+            "slug": "functional-components",
+            "depth": 1,
+            "value": "Functional Components"
+          },
+          {
+            "slug": "simple",
+            "depth": 2,
+            "value": "Simple"
+          },
+          {
+            "slug": "react-hooks",
+            "depth": 2,
+            "value": "React Hooks"
+          },
+          {
+            "slug": "advanced",
+            "depth": 2,
+            "value": "Advanced"
+          }
+        ]
+      }
+    }
+  ],
+  "props": []
+}

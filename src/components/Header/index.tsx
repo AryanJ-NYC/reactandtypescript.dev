@@ -12,6 +12,7 @@ const Brand = styled(Link)`
 
 const StyledHeader = styled.header`
   background: #2c517f;
+  font-size: 1rem;
   padding: 2rem;
 `;
 
