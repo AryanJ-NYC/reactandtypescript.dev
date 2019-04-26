@@ -22,12 +22,6 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     'gatsby-plugin-typescript',
     {
-      resolve: 'gatsby-plugin-layout',
-      options: {
-        component: require.resolve('./src/components/layout.tsx'),
-      },
-    },
-    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
@@ -42,8 +36,8 @@ module.exports = {
         name: `react-and-typescript`,
         short_name: `react-and-typescript`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#294E80`,
+        theme_color: `#294E80`,
         display: `minimal-ui`,
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },

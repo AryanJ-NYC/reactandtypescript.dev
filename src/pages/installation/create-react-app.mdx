@@ -1,0 +1,37 @@
+---
+name: Create React App
+route: /installation/create-react-app
+menu: Installation
+---
+
+# Create React App
+
+For additional details, please refer to the [Create React App documentation](https://facebook.github.io/create-react-app/docs/adding-typescript).
+
+## Create a New App with TypeScript
+
+### Using NPM
+
+```
+npx create-react-app your-app-name --typescript
+```
+
+or
+
+### Using Yarn
+
+```
+yarn create react-app your-app-name --typescript
+```
+
+## Add TypeScript to an Existing Create React App Application
+
+```
+npm install --save typescript @types/node @types/react @types/react-dom @types/jest
+```
+
+```
+yarn add typescript @types/node @types/react @types/react-dom @types/jest
+```
+
+After installing these (and any other [types](http://definitelytyped.org/) you may need), rename your `.js` files to `.tsx` and restart your development server.

@@ -2,44 +2,60 @@
   "config": {
     "title": "React And Typescript",
     "description": "React and TypeScript: The Unofficial Documentation",
-    "menu": [],
+    "menu": [
+      "Home",
+      "Installation",
+      "Examples",
+      [
+        "Functional Components"
+      ]
+    ],
     "version": "0.1.0",
     "repository": "https://github.com/AryanJ-NYC/reactandtypescript.dev",
     "native": false,
     "codeSandbox": true,
-    "themeConfig": {},
+    "themeConfig": {
+      "colors": {
+        "primary": "#294E80"
+      }
+    },
     "separator": "-"
   },
   "entries": [
     {
-      "key": "src/pages/examples.mdx",
+      "key": "src/pages/index.mdx",
       "value": {
-        "name": "Examples",
-        "id": "b743a7e2dc9849530f394eb6172e83b8",
-        "filepath": "src/pages/examples.mdx",
-        "link": "https://github.com/AryanJ-NYC/reactandtypescript.dev/edit/master/src/pages/examples.mdx",
-        "slug": "src-pages-examples",
-        "route": "/src-pages-examples",
+        "name": "Home",
+        "route": "/",
+        "id": "522b7407e210088f3588b943aec44115",
+        "filepath": "src/pages/index.mdx",
+        "link": "https://github.com/AryanJ-NYC/reactandtypescript.dev/edit/master/src/pages/index.mdx",
+        "slug": "src-pages-index",
         "menu": "",
         "headings": [
           {
-            "slug": "react-and-typescript-examples",
+            "slug": "home",
             "depth": 1,
-            "value": "React and TypeScript Examples"
+            "value": "Home"
+          },
+          {
+            "slug": "hi-people",
+            "depth": 1,
+            "value": "Hi people"
           }
         ]
       }
     },
     {
-      "key": "src/pages/functional-components.mdx",
+      "key": "src/pages/examples/functional-components.mdx",
       "value": {
         "name": "Functional Components",
-        "id": "8e6e7e02a956cefb4e0ddcc9e1f626c3",
-        "filepath": "src/pages/functional-components.mdx",
-        "link": "https://github.com/AryanJ-NYC/reactandtypescript.dev/edit/master/src/pages/functional-components.mdx",
-        "slug": "src-pages-functional-components",
-        "route": "/src-pages-functional-components",
-        "menu": "",
+        "route": "/examples/functional-components",
+        "menu": "Examples",
+        "id": "239d719d23ca72118284e4bfa416e18f",
+        "filepath": "src/pages/examples/functional-components.mdx",
+        "link": "https://github.com/AryanJ-NYC/reactandtypescript.dev/edit/master/src/pages/examples/functional-components.mdx",
+        "slug": "src-pages-examples-functional-components",
         "headings": [
           {
             "slug": "functional-components",
@@ -60,6 +76,45 @@
             "slug": "advanced",
             "depth": 2,
             "value": "Advanced"
+          }
+        ]
+      }
+    },
+    {
+      "key": "src/pages/installation/create-react-app.mdx",
+      "value": {
+        "name": "Create React App",
+        "route": "/installation/create-react-app",
+        "menu": "Installation",
+        "id": "8597a27a9e6601a9049b781e8e0e4b73",
+        "filepath": "src/pages/installation/create-react-app.mdx",
+        "link": "https://github.com/AryanJ-NYC/reactandtypescript.dev/edit/master/src/pages/installation/create-react-app.mdx",
+        "slug": "src-pages-installation-create-react-app",
+        "headings": [
+          {
+            "slug": "create-react-app",
+            "depth": 1,
+            "value": "Create React App"
+          },
+          {
+            "slug": "create-a-new-app-with-typescript",
+            "depth": 2,
+            "value": "Create a New App with TypeScript"
+          },
+          {
+            "slug": "using-npm",
+            "depth": 3,
+            "value": "Using NPM"
+          },
+          {
+            "slug": "using-yarn",
+            "depth": 3,
+            "value": "Using Yarn"
+          },
+          {
+            "slug": "add-typescript-to-an-existing-create-react-app-application",
+            "depth": 2,
+            "value": "Add TypeScript to an Existing Create React App Application"
           }
         ]
       }
