@@ -1,0 +1,19 @@
+---
+name: Functional Components
+route: /installation/functional-components
+menu: Examples
+---
+
+# Functional Compoennts
+Given that functional components are just functions that take in props as a parameter, we can do the following:
+
+```tsx
+type HelloWorldProps = {
+  userName: string;
+};
+
+const HelloWorld = ({ userName }: HelloWorldProps) => (
+  <div>Hello, {userName}!</div>
+);
+```
+
