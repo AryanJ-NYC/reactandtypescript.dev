@@ -1,0 +1,13 @@
+diff --git a/node_modules/docz-theme-default/dist/index.esm.js b/node_modules/docz-theme-default/dist/index.esm.js
+index a97632e..0615541 100644
+--- a/node_modules/docz-theme-default/dist/index.esm.js
++++ b/node_modules/docz-theme-default/dist/index.esm.js
+@@ -622,7 +622,7 @@ const Link = (_a) => {
+     var { href } = _a, props = __rest(_a, ["href"]);
+     const { separator, linkComponent: Link } = useConfig();
+     const docs = useDocs();
+-    const toCheck = useMemo(() => [
++    const toCheck = typeof window === 'undefined' ? null : useMemo(() => [
+         location.pathname
+             .split(separator)
+             .slice(0, -1)

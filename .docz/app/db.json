@@ -21,6 +21,7 @@
     },
     "separator": "-"
   },
+  "props": [],
   "entries": [
     {
       "key": "src/pages/index.mdx",
@@ -42,40 +43,6 @@
             "slug": "hi-people",
             "depth": 1,
             "value": "Hi people"
-          }
-        ]
-      }
-    },
-    {
-      "key": "src/pages/examples/functional-components.mdx",
-      "value": {
-        "name": "Functional Components",
-        "route": "/examples/functional-components",
-        "menu": "Examples",
-        "id": "239d719d23ca72118284e4bfa416e18f",
-        "filepath": "src/pages/examples/functional-components.mdx",
-        "link": "https://github.com/AryanJ-NYC/reactandtypescript.dev/edit/master/src/pages/examples/functional-components.mdx",
-        "slug": "src-pages-examples-functional-components",
-        "headings": [
-          {
-            "slug": "functional-components",
-            "depth": 1,
-            "value": "Functional Components"
-          },
-          {
-            "slug": "simple",
-            "depth": 2,
-            "value": "Simple"
-          },
-          {
-            "slug": "react-hooks",
-            "depth": 2,
-            "value": "React Hooks"
-          },
-          {
-            "slug": "advanced",
-            "depth": 2,
-            "value": "Advanced"
           }
         ]
       }
@@ -119,6 +86,5 @@
         ]
       }
     }
-  ],
-  "props": []
+  ]
 }
