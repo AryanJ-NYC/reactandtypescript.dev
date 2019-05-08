@@ -16,7 +16,6 @@
     "gatsby-plugin-typescript": "^2.0.13",
     "gatsby-source-filesystem": "^2.0.31",
     "gatsby-transformer-sharp": "^2.1.18",
-    "patch-package": "^6.1.2",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
@@ -24,9 +23,7 @@
     "styled-components": "^4.2.0"
   },
   "devDependencies": {
-    "docz": "^1.0.4",
-    "docz-theme-default": "^1.0.4",
-    "gatsby-theme-docz": "^1.0.4",
+    "gatsby-theme-docz": "^1.2.0",
     "prettier": "^1.17.0"
   },
   "keywords": [
@@ -39,7 +36,6 @@
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write src/**/*.{js,jsx}",
-    "postinstall": "patch-package",
     "start": "npm run develop",
     "serve": "gatsby serve",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
