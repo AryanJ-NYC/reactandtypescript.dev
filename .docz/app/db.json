@@ -48,6 +48,25 @@
       }
     },
     {
+      "key": "src/pages/examples/functional-components.mdx",
+      "value": {
+        "name": "Functional Components",
+        "route": "/installation/functional-components",
+        "menu": "Examples",
+        "id": "239d719d23ca72118284e4bfa416e18f",
+        "filepath": "src/pages/examples/functional-components.mdx",
+        "link": "https://github.com/AryanJ-NYC/reactandtypescript.dev/edit/master/src/pages/examples/functional-components.mdx",
+        "slug": "src-pages-examples-functional-components",
+        "headings": [
+          {
+            "slug": "functional-components",
+            "depth": 1,
+            "value": "Functional Components"
+          }
+        ]
+      }
+    },
+    {
       "key": "src/pages/installation/create-react-app.mdx",
       "value": {
         "name": "Create React App",

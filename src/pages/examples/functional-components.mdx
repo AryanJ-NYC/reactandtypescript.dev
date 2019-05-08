@@ -4,7 +4,7 @@ route: /installation/functional-components
 menu: Examples
 ---
 
-# Functional Compoennts
+# Functional Components
 Given that functional components are just functions that take in props as a parameter, we can do the following:
 
 ```tsx
@@ -17,3 +17,17 @@ const HelloWorld = ({ userName }: HelloWorldProps) => (
 );
 ```
 
+However, this does not take the `children` prop into account. Use the `React.FC` type and define the generic as your props type.
+
+```tsx
+type HelloWorldProps = {
+  userName: string;
+};
+
+const HelloWorld: React.FC<HelloWorldProps> = ({ children, userName }) => (
+  <div>
+    <p>Hello, {userName}</p>
+    {children}
+  </div>
+)
+```
