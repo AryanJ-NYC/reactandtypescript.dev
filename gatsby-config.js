@@ -1,7 +1,14 @@
 const proxy = require('http-proxy-middleware');
 
 module.exports = {
-  __experimentalThemes: ['gatsby-theme-docz'],
+  __experimentalThemes: [
+    {
+      resolve: 'gatsby-theme-docz',
+      options: {
+        mdPlugins: [require('remark-external-links')],
+      },
+    },
+  ],
   developMiddleware: app => {
     app.use(
       '/.netlify/functions/',
