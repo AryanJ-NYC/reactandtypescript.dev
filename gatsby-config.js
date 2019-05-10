@@ -1,6 +1,14 @@
 const proxy = require('http-proxy-middleware');
 
 module.exports = {
+  __experimentalThemes: [
+    {
+      resolve: 'gatsby-theme-docz',
+      options: {
+        mdPlugins: [require('remark-external-links')],
+      },
+    },
+  ],
   developMiddleware: app => {
     app.use(
       '/.netlify/functions/',
@@ -19,6 +27,7 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
+    'gatsby-plugin-typescript',
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -34,8 +43,8 @@ module.exports = {
         name: `react-and-typescript`,
         short_name: `react-and-typescript`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#294E80`,
+        theme_color: `#294E80`,
         display: `minimal-ui`,
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },

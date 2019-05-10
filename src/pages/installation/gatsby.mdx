@@ -1,0 +1,29 @@
+---
+name: Gatsby
+route: /installation/gatsby
+menu: Installation
+---
+
+# Gatsby
+
+1\. Install [`gatsby-plugin-typescript`](https://www.gatsbyjs.org/packages/gatsby-plugin-typescript/).
+
+```
+npm install gatsby-plugin-typescript
+```
+
+or
+
+```
+yarn add gatsby-plugin-typescript
+```
+
+2\. Add to array of `plugins` in `gatsby-config.js`:
+
+```js
+// gatsby-config.js
+module.exports = {
+  // ...,
+  plugins: [...`gatsby-plugin-typescript`],
+};
+```

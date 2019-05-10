@@ -6,20 +6,25 @@
   "author": "Aryan Jabbari <aryanjabbari@gmail.com>",
   "dependencies": {
     "axios": "^0.18.0",
-    "gatsby": "^2.3.27",
+    "gatsby": "^2.4.3",
     "gatsby-image": "^2.0.40",
+    "gatsby-plugin-layout": "^1.0.15",
     "gatsby-plugin-manifest": "^2.0.29",
     "gatsby-plugin-offline": "^2.0.25",
     "gatsby-plugin-react-helmet": "^3.0.12",
-    "gatsby-plugin-sharp": "^2.0.35",
+    "gatsby-plugin-sharp": "^2.0.37",
+    "gatsby-plugin-typescript": "^2.0.13",
     "gatsby-source-filesystem": "^2.0.31",
     "gatsby-transformer-sharp": "^2.1.18",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-helmet": "^5.2.0"
+    "react-helmet": "^5.2.0",
+    "remark-external-links": "^4.0.0",
+    "styled-components": "^4.2.0"
   },
   "devDependencies": {
+    "gatsby-theme-docz": "^1.2.0",
     "prettier": "^1.17.0"
   },
   "keywords": [
@@ -38,9 +43,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/AryanJ-NYC/reactandtypescript.dev"
   },
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/AryanJ-NYC/reactandtypescript.dev/issues"
   }
 }
