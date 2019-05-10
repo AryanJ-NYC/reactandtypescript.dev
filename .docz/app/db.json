@@ -104,6 +104,25 @@
           }
         ]
       }
+    },
+    {
+      "key": "src/pages/installation/zeit-next-js.mdx",
+      "value": {
+        "name": "Zeit Next.js",
+        "route": "/installation/zeit-next-js",
+        "menu": "Installation",
+        "id": "aa24e7b540a30970bc1e16d589856ee5",
+        "filepath": "src/pages/installation/zeit-next-js.mdx",
+        "link": "https://github.com/AryanJ-NYC/reactandtypescript.dev/edit/master/src/pages/installation/zeit-next-js.mdx",
+        "slug": "src-pages-installation-zeit-next-js",
+        "headings": [
+          {
+            "slug": "zeit-nextjs",
+            "depth": 1,
+            "value": "Zeit Next.js"
+          }
+        ]
+      }
     }
   ]
 }

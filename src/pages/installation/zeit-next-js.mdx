@@ -1,0 +1,73 @@
+---
+name: Zeit Next.js
+route: /installation/zeit-next-js
+menu: Installation
+---
+
+# Zeit Next.js
+
+For additional details, please refer to [Next.js + Typescript documentation](https://github.com/zeit/next-plugins/tree/master/packages/next-typescript).
+
+1\. In an existing, Zeit.js project, install `@zeit/next-typescript`:
+
+```
+npm install --save @zeit/next-typescript
+```
+
+or
+
+```
+yarn add @zeit/next-typescript
+```
+
+2\. Create or edit `next.config.js`:
+
+```js
+// new next.config.js
+const withTypescript = require('@zeit/next-typescript');
+module.exports = withTypescript();
+```
+
+or
+
+```js
+// existing next.config.js
+const withTypescript = require('@zeit/next-typescript');
+module.exports = withTypescript({
+  webpack(config, options) {
+    return config;
+  },
+});
+```
+
+3\. Create or edit `.babelrc`:
+
+```json
+{
+  "presets": ["next/babel", "@zeit/next-typescript/babel"]
+}
+```
+
+4\. Create a [`tsconfig.json`](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html) in the root of your project:
+
+```json
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "allowSyntheticDefaultImports": true,
+    "jsx": "preserve",
+    "lib": ["dom", "es2017"],
+    "module": "esnext",
+    "moduleResolution": "node",
+    "noEmit": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "preserveConstEnums": true,
+    "removeComments": false,
+    "skipLibCheck": true,
+    "sourceMap": true,
+    "strict": true,
+    "target": "esnext"
+  }
+}
+```
