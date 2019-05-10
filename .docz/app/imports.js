@@ -7,6 +7,10 @@ export const imports = {
     import(
       /* webpackPrefetch: true, webpackChunkName: "src-pages-examples-functional-components" */ 'src/pages/examples/functional-components.mdx'
     ),
+  'src/pages/installation/gatsby.mdx': () =>
+    import(
+      /* webpackPrefetch: true, webpackChunkName: "src-pages-installation-gatsby" */ 'src/pages/installation/gatsby.mdx'
+    ),
   'src/pages/installation/create-react-app.mdx': () =>
     import(
       /* webpackPrefetch: true, webpackChunkName: "src-pages-installation-create-react-app" */ 'src/pages/installation/create-react-app.mdx'

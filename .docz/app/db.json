@@ -67,6 +67,25 @@
       }
     },
     {
+      "key": "src/pages/installation/gatsby.mdx",
+      "value": {
+        "name": "Gatsby",
+        "route": "/installation/gatsby",
+        "menu": "Installation",
+        "id": "564fc0dc9ce695d4d297e27fac07047b",
+        "filepath": "src/pages/installation/gatsby.mdx",
+        "link": "https://github.com/AryanJ-NYC/reactandtypescript.dev/edit/master/src/pages/installation/gatsby.mdx",
+        "slug": "src-pages-installation-gatsby",
+        "headings": [
+          {
+            "slug": "gatsby",
+            "depth": 1,
+            "value": "Gatsby"
+          }
+        ]
+      }
+    },
+    {
       "key": "src/pages/installation/create-react-app.mdx",
       "value": {
         "name": "Create React App",
