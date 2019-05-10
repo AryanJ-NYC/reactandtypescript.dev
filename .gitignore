@@ -58,6 +58,9 @@ typings/
 .cache/
 public
 
+# docz files
+.docz/
+
 # netlify files
 .netlify/
 
@@ -68,5 +71,6 @@ public
 yarn-error.log
 .pnp/
 .pnp.js
+
 # Yarn Integrity file
 .yarn-integrity
