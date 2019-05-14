@@ -1,0 +1,119 @@
+---
+name: Hooks
+route: /examples/hooks
+menu: Examples
+---
+
+import SEO from '../../components/seo';
+
+<SEO
+  description="Using TypeScript with React hooks."
+  title="Hooks"
+  keywords={['hooks']}
+/>
+
+# Hooks
+
+## useState
+
+Type inference works when state is initialized to a non-null value:
+
+```typescript
+const [value, setValue] = useState('initial state');
+```
+
+For non-null values:
+
+```typescript
+const [value, setValue] = useState<string | null>('initial state');
+```
+
+## useEffect
+
+Like `useState`, type inference works for `useEffect`. Please note that you must return a function or `undefined` for type inference to work correctly. As described in [Trey Huffine](https://levelup.gitconnected.com/@treyhuffine)'s [useTypescript — A Complete Guide to React Hooks and TypeScript](https://levelup.gitconnected.com/usetypescript-a-complete-guide-to-react-hooks-and-typescript-db1858d1fb9c):
+
+```typescript
+// THIS IS INCORRECT | READ ABOVE AND DO NOT USE
+function DelayedEffect(props: { timerMs: number }) {
+  const { timerMs } = props;
+  useEffect(
+    // ** BAD! ** setTimeout implicitly returns a number because the arrow function body isn't wrapped in curly braces
+    () =>
+      setTimeout(() => {
+        /* do stuff */
+      }, timerMs),
+    [timerMs]
+  );
+  return null;
+}
+```
+
+## useRef
+
+Like the two hooks above, type inference works for `useRef`. When creating a ref container that does not have an initial value:
+
+```typescript
+const ref = useRef<HTMLElement | null>(null);
+```
+
+## useReducer
+
+The following `useReducer` example is from the [React docs](https://reactjs.org/docs/hooks-reference.html#usereducer) (with some added code to introduce complexity). Please note the use of [discriminated unions](https://www.typescriptlang.org/docs/handbook/advanced-types.html#discriminated-unions) when defining `Action`. This is necessary to define different `payload` types for different `type`s of actions.
+
+```typescript
+enum ActionType {
+  Increment = 'increment',
+  Decrement = 'decrement',
+  ModifyLastButtonPressed = 'modify_last_button_pressed',
+}
+
+type AppState = {
+  count: number;
+  lastButtonPressed: string;
+};
+
+type Action =
+  | { type: ActionType.Increment | ActionType.Decrement; payload: number }
+  | { type: ActionType.ModifyLastButtonPressed; payload: string };
+
+const initialState = { count: 0, lastButtonPressed: '' };
+
+const reducer: React.Reducer<AppState, Action> = (state, action) => {
+  switch (action.type) {
+    case ActionType.Increment:
+      return { ...state, count: state.count + action.payload };
+    case ActionType.Decrement:
+      return { ...state, count: state.count - action.payload };
+    case ActionType.ModifyLastButtonPressed:
+      return { ...state, lastButtonPressed: action.payload };
+    default:
+      throw new Error();
+  }
+};
+
+function Counter({ initialState }) {
+  const [state, dispatch] = useReducer(reducer, initialState);
+  return (
+    <React.Fragment>
+      Count: {state.count} You last pressed: {state.lastButtonPressed}
+      <br />
+      <button
+        onClick={() => {
+          dispatch({ type: ActionType.Increment, payload: 1 });
+          dispatch({ type: ActionType.ModifyLastButtonPressed, payload: '+' });
+        }}
+      >
+        +
+      </button>
+      <button
+        onClick={() => {
+          dispatch({ type: ActionType.Decrement, payload: 1 });
+          dispatch({ type: ActionType.ModifyLastButtonPressed, payload: '-' });
+        }}
+      >
+        -
+      </button>
+    </React.Fragment>
+  );
+}
+```

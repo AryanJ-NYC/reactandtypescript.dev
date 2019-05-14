@@ -1,13 +1,22 @@
 ---
 name: Functional Components
-route: /installation/functional-components
+route: /examples/functional-components
 menu: Examples
 ---
 
+import SEO from '../../components/seo';
+
+<SEO
+  description="Using TypeScript with React functional components."
+  title="Functional Components"
+  keywords={['functional components', 'sfc', 'stateless functional components']}
+/>
+
 # Functional Components
+
 Given that functional components are just functions that take in props as a parameter, we can do the following:
 
-```tsx
+```typescript
 type HelloWorldProps = {
   userName: string;
 };
@@ -19,7 +28,7 @@ const HelloWorld = ({ userName }: HelloWorldProps) => (
 
 However, this does not take the `children` prop into account. Use the `React.FC` type and define the generic as your props type.
 
-```tsx
+```typescript
 type HelloWorldProps = {
   userName: string;
 };
@@ -29,5 +38,5 @@ const HelloWorld: React.FC<HelloWorldProps> = ({ children, userName }) => (
     <p>Hello, {userName}</p>
     {children}
   </div>
-)
+);
 ```
