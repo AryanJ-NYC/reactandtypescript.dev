@@ -1,0 +1,35 @@
+---
+name: Higher Order Components (HOCs)
+route: /examples/hocs
+menu: Examples
+---
+
+# Higher Order Components (HOCs)
+
+Please note that this section uses the `utility-types` [package](https://github.com/piotrwitek/utility-types) since, as of May 2019, the helper functions were unavailable in TypeScript.
+
+## Injected Props
+
+HOCs often inject props into wrapped components. In the below example, `T` is defined as the `WrappedComponent` props together with the
+
+```tsx
+import { ComponentType } from 'react';
+import { Diff } from 'utility-types';
+
+export interface WithWoofStringProps {
+  woof: string;
+}
+
+export default function withWoofString<T extends WithWoofStringProps>(
+  WrappedComponent: ComponentType<T>
+) {
+  const woof = 'woof';
+
+  // note below that Diff removes the props from T that exist in WithWoofStringProps
+  // this leaves us with the props of the originally passed in component (without the injected props)
+  const hocComponent = (props: Diff<T, WithWoofStringProps>) => (
+    <WrappedComponent {...props as T} woof={woof} />
+  );
+  return hocComponent;
+}
+```
