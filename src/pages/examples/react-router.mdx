@@ -1,0 +1,57 @@
+---
+name: React Router
+route: /examples/react-router
+menu: Examples
+---
+
+# React Router
+
+## withRouter
+
+To use a component injected with `withRouter` props, import and use `RouteComponentProps` ([declaration](https://github.com/DefinitelyTyped/DefinitelyTyped/blob/master/types/react-router/index.d.ts#L71)) from `react-router`:
+
+```typescript
+import { RouteComponentProps, withRouter } from 'react-router';
+
+type SomeComponentProps = RouteComponentProps;
+
+const SomeComponent: React.FC<SomeComponentProps> = ({ history }) => {
+  const goHome = () => history.push('/home');
+
+  return <button onClick={goHome}>Go Home</button>;
+};
+
+export default withRouter(SomeComponent);
+```
+
+## URL Parameters
+
+To type URL parameters, import and use `RouteComponentProps` ([declaration](https://github.com/DefinitelyTyped/DefinitelyTyped/blob/master/types/react-router/index.d.ts#L71)) from `react-router`. Pass your parameter definitions as a type variable to `RouteComponentProps`:
+
+```tsx
+// Router.tsx
+import { BrowserRouter, Route } from 'react-router-dom';
+
+const Router = () => {
+  return (
+    <BrowserRouter>
+      <Route exact path="/books/:id" component={Books} />
+    </BrowserRouter>
+  );
+};
+
+// BookDetail.tsx
+import { RouteComponentProps, withRouter } from 'react-router';
+
+type BookDetailParams = {
+  id: string; // parameters will always be a string (even if they are numerical)
+};
+
+type BookDetailProps = RouteComponentProps<BookDetailParams>;
+
+const BookDetail: React.FC<> = ({ match }) => {
+  return <div>Book ID: {match.params.id}</div>;
+};
+
+export default withRouter(BookDetail);
+```
