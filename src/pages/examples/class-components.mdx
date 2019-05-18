@@ -1,0 +1,42 @@
+---
+name: Class Components
+route: /examples/class-components
+menu: Examples
+---
+
+import SEO from '../../components/Seo';
+
+<SEO
+  description="Using TypeScript with React class components."
+  title="Class Components"
+  keywords={['class components']}
+/>
+
+# Class Components
+
+`React.Component` is used to describe a class component. `React.Component` is a generic type that takes two **_optional_** type variables, `PropType` and `StateType`.
+
+The following example is from the [react-typescript-cheatsheet](https://github.com/typescript-cheatsheets/react-typescript-cheatsheet).
+
+```typescript
+type MyProps = {
+  // using `interface` is also ok
+  message: string;
+};
+type MyState = {
+  count: number; // like this
+};
+class App extends React.Component<MyProps, MyState> {
+  state: MyState = {
+    // optional second annotation for better type inference
+    count: 0,
+  };
+  render() {
+    return (
+      <div>
+        {this.props.message} {this.state.count}
+      </div>
+    );
+  }
+}
+```
