@@ -14,7 +14,7 @@ function SEO({ description, lang, meta, keywords, title }) {
         lang,
       }}
       title={title}
-      titleTemplate={`%s | React and Typescript`}
+      titleTemplate={`%s | React and TypeScript`}
       meta={[
         {
           name: `description`,
