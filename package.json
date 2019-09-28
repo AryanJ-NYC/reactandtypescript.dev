@@ -6,26 +6,17 @@
   "author": "Aryan Jabbari <aryanjabbari@gmail.com>",
   "dependencies": {
     "axios": "^0.18.1",
-    "gatsby": "^2.8.2",
-    "gatsby-image": "^2.1.2",
-    "gatsby-plugin-layout": "^1.0.15",
-    "gatsby-plugin-manifest": "^2.1.1",
-    "gatsby-plugin-offline": "^2.1.0",
-    "gatsby-plugin-react-helmet": "^3.0.12",
-    "gatsby-plugin-sharp": "^2.1.3",
-    "gatsby-plugin-typescript": "^2.0.15",
-    "gatsby-source-filesystem": "^2.0.38",
-    "gatsby-transformer-sharp": "^2.1.21",
     "prop-types": "^15.7.2",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "react-helmet": "^5.2.1",
-    "remark-external-links": "^4.0.0",
-    "styled-components": "^4.2.1"
+    "react-helmet": "^5.2.1"
   },
   "devDependencies": {
-    "gatsby-theme-docz": "^1.2.0",
-    "prettier": "^1.17.1"
+    "docz": "^1.3.2",
+    "docz-theme-default": "^1.2.0",
+    "gatsby": "^2.15.21",
+    "prettier": "^1.17.1",
+    "react": "^16.9.0",
+    "react-dom": "^16.8.6",
+    "styled-components": "^4.4.0"
   },
   "keywords": [
     "gatsby",
@@ -34,12 +25,10 @@
   ],
   "license": "MIT",
   "scripts": {
-    "build": "gatsby build",
-    "predevelop": "gatsby clean",
-    "develop": "gatsby develop",
+    "develop": "docz dev",
+    "build": "docz build",
     "format": "prettier --write src/**/*.{js,jsx}",
     "start": "npm run develop",
-    "serve": "gatsby serve",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
   },
   "repository": {

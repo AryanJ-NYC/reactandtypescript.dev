@@ -3,4 +3,5 @@ export default {
   themeConfig: {
     colors: { primary: '#294E80' },
   },
+  typescript: true,
 };

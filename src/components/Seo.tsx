@@ -1,25 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
-import { useStaticQuery, graphql } from 'gatsby';
 
 function SEO({ description, lang, meta, keywords, title }) {
   const defaultKeywords = ['react', 'typescript'];
-  const { site } = useStaticQuery(
-    graphql`
-      query {
-        site {
-          siteMetadata {
-            title
-            description
-            author
-          }
-        }
-      }
-    `
-  );
 
-  const metaDescription = description || site.siteMetadata.description;
+  const metaDescription =
+    description || 'React and TypeScript: The Unofficial Documentation';
 
   return (
     <Helmet
@@ -27,7 +14,7 @@ function SEO({ description, lang, meta, keywords, title }) {
         lang,
       }}
       title={title}
-      titleTemplate={`%s | ${site.siteMetadata.title}`}
+      titleTemplate={`%s | React and Typescript`}
       meta={[
         {
           name: `description`,
@@ -51,7 +38,7 @@ function SEO({ description, lang, meta, keywords, title }) {
         },
         {
           name: `twitter:creator`,
-          content: site.siteMetadata.author,
+          content: '@aryanjabbari',
         },
       ]
         .concat({
