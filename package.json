@@ -4,6 +4,15 @@
   "description": "React and TypeScript: The Unofficial Documentation",
   "version": "0.1.0",
   "author": "Aryan Jabbari <aryanjabbari@gmail.com>",
+  "scripts": {
+    "predevelop": "yarn clean",
+    "develop": "docz dev",
+    "prebuild": "yarn clean",
+    "build": "docz build",
+    "clean": "rimraf ./.docz",
+    "format": "prettier --write src/**/*.{js,jsx}",
+    "start": "yarn develop"
+  },
   "dependencies": {
     "axios": "^0.18.1",
     "docz": "^1.3.2",
@@ -16,6 +25,7 @@
     "prettier": "^1.17.1",
     "react": "^16.9.0",
     "react-dom": "^16.8.6",
+    "rimraf": "^3.0.0",
     "styled-components": "^4.4.0"
   },
   "keywords": [
@@ -24,13 +34,6 @@
     "typescript"
   ],
   "license": "MIT",
-  "scripts": {
-    "develop": "docz dev",
-    "build": "docz build",
-    "format": "prettier --write src/**/*.{js,jsx}",
-    "start": "npm run develop",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
-  },
   "repository": {
     "type": "git",
     "url": "https://github.com/AryanJ-NYC/reactandtypescript.dev"
