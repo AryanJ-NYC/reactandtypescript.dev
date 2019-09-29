@@ -5,14 +5,11 @@ import Helmet from 'react-helmet';
 function SEO({ description, lang, meta, keywords, title }) {
   const defaultKeywords = ['react', 'typescript'];
 
-  const metaDescription =
-    description || 'React and TypeScript: The Unofficial Documentation';
+  const metaDescription = description || 'React and TypeScript: The Unofficial Documentation';
 
   return (
     <Helmet
-      htmlAttributes={{
-        lang,
-      }}
+      htmlAttributes={{ lang }}
       title={title}
       titleTemplate={`%s | React and TypeScript`}
       meta={[
