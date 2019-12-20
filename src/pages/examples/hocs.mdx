@@ -20,7 +20,7 @@ Please note that this section uses the `utility-types` [package](https://github.
 
 HOCs often inject props into wrapped components. In the below example, `T` is defined as the `WrappedComponent` props together with the
 
-```tsx
+```typescript
 import { ComponentType } from 'react';
 import { Diff } from 'utility-types';
 
@@ -36,7 +36,7 @@ export default function withWoofString<T extends WithWoofStringProps>(
   // note below that Diff removes the props from T that exist in WithWoofStringProps
   // this leaves us with the props of the originally passed in component (without the injected props)
   const hocComponent = (props: Diff<T, WithWoofStringProps>) => (
-    <WrappedComponent {...props as T} woof={woof} />
+    <WrappedComponent {...(props as T)} woof={woof} />
   );
   return hocComponent;
 }

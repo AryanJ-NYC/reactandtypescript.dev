@@ -9,13 +9,7 @@ import SEO from '../../components/Seo';
 <SEO
   description="Using TypeScript with React Router."
   title="React Router"
-  keywords={[
-    'react router',
-    'router',
-    'withRouter',
-    'url parameters',
-    'route parameters',
-  ]}
+  keywords={['react router', 'router', 'withRouter', 'url parameters', 'route parameters']}
 />
 
 # React Router
@@ -42,7 +36,7 @@ export default withRouter(SomeComponent);
 
 To type URL parameters, import and use `RouteComponentProps` ([declaration](https://github.com/DefinitelyTyped/DefinitelyTyped/blob/master/types/react-router/index.d.ts#L71)) from `react-router`. Pass your parameter definitions as a type variable to `RouteComponentProps`:
 
-```tsx
+```typescript
 // Router.tsx
 import { BrowserRouter, Route } from 'react-router-dom';
 
