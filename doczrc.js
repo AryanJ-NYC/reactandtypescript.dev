@@ -1,5 +1,5 @@
 export default {
-  menu: ['Home', 'Installation', 'Examples', ['Functional Components']],
+  menu: ['Home', 'Installation', 'Examples'],
   themeConfig: {
     colors: { primary: '#294E80' },
   },
