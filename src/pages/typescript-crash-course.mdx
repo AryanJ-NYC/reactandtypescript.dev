@@ -1,0 +1,54 @@
+---
+name: TypeScript Crash Course
+route: /typescript-crash-course
+---
+
+# TypeScript Crash Course
+
+This is meant to be a basic introduction to common types used in TypeScript. This is not necessarily releated to React but will be used as React files are typed.
+
+```typescript
+const myName: string = 'Aryan';
+const myAge: number = 25; // I swear 🤥:
+
+// array of type
+const myFavoriteLanguages: string[] = ['JavaScript', 'Python', 'Java'];
+
+// string literals (must be one of these EXACT values)
+const seasons: 'summer' | 'fall' | 'winter' | 'spring' = 'winter';
+
+// object with specific properties
+const car: {
+  make: string;
+  model: string;
+  yearReleased: number;
+  hasAirbags?: boolean; // the question mark means this property is optional
+} = {
+  make: 'Honda',
+  model: 'Civic',
+  yearReleased: 1994,
+}; // fun fact, this was my first car!
+
+// you can also define the type separately
+type Car = {
+  make: string;
+  model: string;
+  yearReleased: number;
+  hasAirbags?: boolean;
+};
+const someFancierCar: Car = {
+  make: 'Jaguar',
+  model: 'XJ',
+  yearReleased: 2019,
+  hasAirbags: true,
+};
+
+// array of objects
+const garage: Car[] = [car, someFancierCar];
+
+// function without call signature
+const callback: Function = () => 'ohai!';
+
+// function with call signature
+const callbackWithStrictSignature: (name: string) => string = () => `hai again, ${name}!`;
+```
