@@ -14,19 +14,7 @@ import SEO from '../../components/Seo';
 
 # Functional Components
 
-Given that functional components are just functions that take in props as a parameter, we can do the following:
-
-```typescript
-type HelloWorldProps = {
-  userName: string;
-};
-
-const HelloWorld = ({ userName }: HelloWorldProps) => (
-  <div>Hello, {userName}!</div>
-);
-```
-
-However, this does not take the `children` prop into account. Use the `React.FC` type and define the generic as your props type.
+Use the `React.FC` type and define the generic with your props type.
 
 ```typescript
 type HelloWorldProps = {
@@ -39,6 +27,31 @@ const HelloWorld: React.FC<HelloWorldProps> = ({ children, userName }) => (
     {children}
   </div>
 );
+```
+
+## Functional Components with "Static" Properties
+
+If you need to use a "static" property with your functional component (say, to define a router), you can do the following:
+
+```typescript
+type Router = {
+  route: string;
+};
+const someFancyRouter: Router = { route: '/hello/world' };
+
+type HelloWorldProps = {
+  userName: string;
+};
+
+type HelloWorldComponent = React.FC<HelloWorldProps> & { router: Router };
+
+const HelloWorld: HelloWorldComponent = ({ children, userName }) => (
+  <div>
+    <p>Hello, {userName}</p>
+    {children}
+  </div>
+);
+HelloWorld.router = someFancyRouter;
 ```
 
 [This video](https://www.youtube.com/watch?v=9lUN3sqAjQQ) explains another example of typing a functional component.
