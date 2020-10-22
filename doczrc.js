@@ -4,4 +4,8 @@ export default {
     colors: { primary: '#294E80' },
   },
   typescript: true,
+  public: 'public',
+  htmlContext: {
+    favicon: 'public/favicon.ico'
+  }
 };
